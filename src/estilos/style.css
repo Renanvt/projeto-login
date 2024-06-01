@@ -1,13 +1,15 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-*{
+* {
     margin: 0px;
     padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    /* Borda faça parte da conta da largura, por padrão texta por dentro da borda */
 }
 
-:root{
+:root {
     --cor01: #20272D;
     --cor02: #000000;
     --cor03: #9BAEB4;
@@ -19,47 +21,57 @@
 
 }
 
-body{
+body, html {
     background-color: var(--cor04);
+    width: 100vw;
+    height: 100vh;
 }
-main{
+
+main {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+section#login {
     background-color: white;
     position: absolute;
-    width: 50vw;
-    margin: auto;
-    padding: 0px 15px 0px 15px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-
-    box-shadow: 0.2px 0.1px 10px 3px #6b7d83;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    width: 60vw;
+    height: 650px;
+
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px #6b7d83;
+
+    overflow: hidden;
+    /* Tudo oque tiver fora da borda, vai ficar escondido */
 }
 
-header{
-    height: 300px;
-    width: 112.1%;
-    margin-left:-15px;
+section#login>div#imagem {
+    display: block;
     background-image: url("/src/img/predio.jpg");
     background-color: black;
+    height: 300px;
     background-position: left;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    
+
 }
 
-h1{
+section#login>div#formulario {
+    display: block;
+    padding: 10px;
+
+}
+
+h1 {
     font-family: var(--font-destaque);
-    margin-top: 20px;
+    font-size: 2em;
     margin-bottom: 20px;
     text-align: center;
-    font-size: 2em;
 }
 
-p{
+p {
     font-family: var(--font-texto);
     text-align: justify;
     line-height: 1.2em;
@@ -67,26 +79,31 @@ p{
     margin-bottom: 5px;
 }
 
-span{
-    position: absolute;
-    height: 30px;
-    margin-top: 2px;
-    margin-left: 2px;
-    text-align: center;
-    align-self: center;
-    background-color: white;
+form >div.campo{
+    display: block;
+    background-color: var(--cor01);
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    margin: 5px 0px;
+}
+div.campo > label {
+ display: none;
 }
 
-input#iemail{
+form>input[type=email]{
+    display: block;
+    width: 100%;
+    height: 30px;
     font-family: var(--font-destaque);
     background-color: var(--cor01);
 
     border-radius: 6px;
-    width: 255px;
-    height: 30px;
+    
+   
 }
 
-input#isenha{
+form>input[type=password]{
     font-family: var(--font-destaque);
     background-color: var(--cor01);
     border-radius: 6px;
@@ -95,34 +112,43 @@ input#isenha{
     height: 30px;
 }
 
-input#ientrar {
+form>input[type=submit] {
+    display: block;
     font-family: var(--font-destaque);
     background-color: var(--cor01);
-    border-radius: 6px;
     font-size: 1.2em;
     color: white;
-    margin-top: 5px;
-    text-align: center;
-    width: 259px;
+    width: 100%;
     height: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
 }
-input#ientrar:hover {
+
+form>input[type=submit]:hover {
     background-color: var(--cor02);
 }
 
-input#iesquecisenha{
+form > a.botao {
+    display: block;
     font-family: var(--font-destaque);
-    background-color: var(--cor03);
-    border-radius: 6px;
     font-size: 1.2em;
-    
-    color: white;
-    margin-top: 5px;
-    text-align: center;
-    width: 259px;
+    width: 100%;
     height: 40px;
-    margin-bottom: 40px;
+    background-color: var(--cor03);
+    color: white;
+    border-radius: 7px;
+    border: 1px solid var(--cor03);
+    text-decoration: none;
+    padding-top: 5px;
+    margin-top: 5px;
+
 }
-input#iesquecisenha:hover{
+form >a.botao > i{
+    font-size: 0.8em;
+}
+
+form >a.botao:hover {
     background-color: var(--cor02);
 }
