@@ -1,0 +1,24 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --cor01: #20272D;
+    --cor02: #000000;
+    --cor03: #9BAEB4;
+    --cor03: #BCCBD2;
+    --cor04: #9db9c2;
+
+    --font-destaque: "Open Sans", sans-serif;
+    --font-texto: "Noto Sans", sans-serif;
+
+}
+
+@media screen and(min-width:767px) {
+    /* Para tablets */
+}
