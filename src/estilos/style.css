@@ -68,18 +68,18 @@ section#login>div#formulario {
 
 }
 
-h1 {
+div#formulario > h1 {
     font-family: var(--font-destaque);
     font-size: 2em;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-align: center;
 }
 
-p {
+div#formulario > p {
     font-family: var(--font-texto);
     text-align: justify;
     line-height: 1.2em;
-    font-size: 0.9em;
+    font-size: 0.8em;
     margin-bottom: 5px;
 }
 

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 /* Typical Devices Breakpoints
 Celular pequeno -  até 575px (small)
@@ -9,69 +9,72 @@ Desktop: 992px até 1200px
 TV e grandes telas - +1200px (extra large)
 */
 
-
-*{
-    margin: 0px;
-    padding: 0px;
-    font-family: Arial, Helvetica, sans-serif;
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-:root{
-    --cor01: #20272D;
-    --cor02: #000000;
-    --cor03: #9BAEB4;
-    --cor03: #BCCBD2;
-    --cor04: #9db9c2;
+:root {
+  --cor01: #20272d;
+  --cor02: #000000;
+  --cor03: #9baeb4;
+  --cor03: #bccbd2;
+  --cor04: #9db9c2;
 
-    --font-destaque: "Open Sans", sans-serif;
-    --font-texto: "Noto Sans", sans-serif;
-
+  --font-destaque: "Open Sans", sans-serif;
+  --font-texto: "Noto Sans", sans-serif;
 }
 
-@media screen and (min-width:768px) and (max-width: 991px) {
-    /* Para tablets */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  /* Para tablets */
 
-    body{
-        background-image: linear-gradient(to top, #9BAEB4, #363636)
-    }
+  body {
+    background-image: linear-gradient(to top, #9baeb4, #363636);
+  }
 
-    section#login{
-        width: 90vw;
-    }
+  section#login {
+    width: 90vw;
+  }
 
-    section#login > div#imagem{
-        float:left;
-        width: 30%;
-        height: 100%;
-    }
+  section#login > div#imagem {
+    float: right;
+    width: 30%;
+    height: 100%;
+  }
 
-    section#login > div#formulario{
-        float: right;
-        width: 70%;
-    }
+  section#login > div#formulario {
+    float: left;
+    width: 70%;
+  }
 }
 
 @media screen and (min-width: 991px) {
-    /*Tela grande*/
+  /*Tela grande*/
 
-     body{
-        background-image: linear-gradient(to top, #9BAEB4, #363636)
-    }
+  body {
+    background-image: linear-gradient(to top, #9baeb4, #363636);
+  }
 
-    section#login {
-        width: 950px;
-    }
+  section#login {
+    width: 950px;
+  }
 
-    section#login > div#imagem{
-        float:left;
-        width: 50%;
-        height: 100%;
-        
-    }
+  section#login > div#imagem {
+    float: right;
+    width: 50%;
+    height: 100%;
+  }
 
-     section#login > div#formulario{
-        float: right;
-        width: 50%;
+  section#login > div#formulario {
+    float: left;
+    width: 50%;
+  }
+  div#formulario > h1 {
+    font-size: 2em;
+  }
 
-     }
+  div#formulario > p {
+    font-size: 1.2em;
+  }
 }
