@@ -1,6 +1,15 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+/* Typical Devices Breakpoints
+Celular pequeno -  até 575px (small)
+Celular comum - de 576px até 767px (medium)
+Tablets e laptops pequenos - de 768px á 991px (large)
+Desktop: 992px até 1200px
+TV e grandes telas - +1200px (extra large)
+*/
+
+
 *{
     margin: 0px;
     padding: 0px;
@@ -19,6 +28,50 @@
 
 }
 
-@media screen and(min-width:767px) {
+@media screen and (min-width:768px) and (max-width: 991px) {
     /* Para tablets */
+
+    body{
+        background-image: linear-gradient(to top, #9BAEB4, #363636)
+    }
+
+    section#login{
+        width: 90vw;
+    }
+
+    section#login > div#imagem{
+        float:left;
+        width: 30%;
+        height: 100%;
+    }
+
+    section#login > div#formulario{
+        float: right;
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 991px) {
+    /*Tela grande*/
+
+     body{
+        background-image: linear-gradient(to top, #9BAEB4, #363636)
+    }
+
+    section#login {
+        width: 950px;
+    }
+
+    section#login > div#imagem{
+        float:left;
+        width: 50%;
+        height: 100%;
+        
+    }
+
+     section#login > div#formulario{
+        float: right;
+        width: 50%;
+
+     }
 }
